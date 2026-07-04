@@ -11,6 +11,9 @@ import {
   ArrowLeft,
 } from "lucide-react";
 
+const CONTACT_WHATSAPP =
+  import.meta.env.VITE_CONTACT_WHATSAPP || "919876543210";
+
 export default function PropertyDetails({ property, setCurrentPage }) {
   const [inquiryForm, setInquiryForm] = useState({
     name: "",
@@ -55,9 +58,25 @@ export default function PropertyDetails({ property, setCurrentPage }) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
+      // Build WhatsApp message
+      const propertyDetails = property
+        ? `*Property*: ${property.title}\n*Price*: ${property.priceText}\n*Location*: ${property.location}\n\n`
+        : "";
+
+      const text =
+        `Hello Nest to Homes! I would like to schedule a consultation:\n\n` +
+        propertyDetails +
+        `• *Name*: ${inquiryForm.name.trim()}\n` +
+        `• *Email*: ${inquiryForm.email.trim()}\n` +
+        `• *Phone*: ${inquiryForm.phone.trim()}\n` +
+        `• *Details*: ${(inquiryForm.msg || "").trim()}`;
+
+      const whatsappUrl = `https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(text)}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
       setSuccess(true);
-      // Simulate form submission to nesttohomes@gmail.com
-      console.log("Sending inquiry to nesttohomes@gmail.com:", inquiryForm);
       setInquiryForm({ name: "", email: "", phone: "", msg: "" });
       setTimeout(() => setSuccess(false), 8000);
     }

@@ -9,6 +9,8 @@ import {
   Briefcase,
 } from "lucide-react";
 
+const CONTACT_PHONE = import.meta.env.VITE_CONTACT_PHONE || "+91 98765 43210";
+
 export default function Footer({ setCurrentPage }) {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
@@ -132,8 +134,11 @@ export default function Footer({ setCurrentPage }) {
             </div>
             <div style={styles.contactItem}>
               <Phone size={18} color="var(--accent-gold)" />
-              <a href="tel:+919876543210" style={styles.contactText}>
-                +91 98765 43210
+              <a
+                href={`tel:${CONTACT_PHONE.replace(/\s+/g, "")}`}
+                style={styles.contactText}
+              >
+                {CONTACT_PHONE}
               </a>
             </div>
             <div style={styles.contactItem}>

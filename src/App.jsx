@@ -7,6 +7,7 @@ import PropertyDetails from "./pages/PropertyDetails";
 import VirtualTourPage from "./pages/VirtualTourPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import FloatingContact from "./components/FloatingContact";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -85,6 +86,9 @@ function App() {
 
       {/* Footer Details */}
       <Footer setCurrentPage={setCurrentPage} />
+
+      {/* Premium Floating Contact Triggers */}
+      <FloatingContact />
     </div>
   );
 }

@@ -9,6 +9,10 @@ import {
   Clock,
 } from "lucide-react";
 
+const CONTACT_PHONE = import.meta.env.VITE_CONTACT_PHONE || "+91 98765 43210";
+const CONTACT_WHATSAPP =
+  import.meta.env.VITE_CONTACT_WHATSAPP || "919876543210";
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -36,8 +40,20 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
+      // Build WhatsApp message
+      const text =
+        `Hello Nest to Homes! I would like to get in touch. Here are my details:\n\n` +
+        `• *Name*: ${form.name.trim()}\n` +
+        `• *Email*: ${form.email.trim()}\n` +
+        `• *Subject*: ${form.subject.trim()}\n` +
+        `• *Message*: ${form.message.trim()}`;
+
+      const whatsappUrl = `https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(text)}`;
+
+      // Open in a new tab
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
       setSubmitted(true);
-      console.log("Sending message to nesttohomes@gmail.com:", form);
       setForm({ name: "", email: "", subject: "", message: "" });
       setTimeout(() => setSubmitted(false), 8000);
     }
@@ -91,8 +107,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <h5 style={styles.contactLabel}>Direct Concierge line</h5>
-                  <a href="tel:+919876543210" style={styles.contactLink}>
-                    +91 98765 43210
+                  <a
+                    href={`tel:${CONTACT_PHONE.replace(/\s+/g, "")}`}
+                    style={styles.contactLink}
+                  >
+                    {CONTACT_PHONE}
                   </a>
                 </div>
               </div>
