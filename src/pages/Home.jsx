@@ -3,7 +3,7 @@ import {
   Search,
   MapPin,
   Home as HomeIcon,
-  DollarSign,
+  IndianRupee,
   ArrowRight,
   Star,
   Shield,
@@ -102,7 +102,7 @@ export default function Home({ setCurrentPage, setSelectedProperty }) {
               <div style={styles.fieldGroup}>
                 <label style={styles.fieldLabel}>Budget Range</label>
                 <div style={styles.fieldInputWrapper}>
-                  <DollarSign size={18} color="var(--accent-gold)" />
+                  <IndianRupee size={18} color="var(--accent-gold)" />
                   <select
                     value={searchPrice}
                     onChange={(e) => setSearchPrice(e.target.value)}

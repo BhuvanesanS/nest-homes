@@ -2,7 +2,6 @@ import React, { useState, useMemo } from "react";
 import {
   Search,
   MapPin,
-  DollarSign,
   Home as HomeIcon,
   Star,
   Filter,
