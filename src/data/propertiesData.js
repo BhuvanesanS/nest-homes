@@ -25,7 +25,7 @@ export const propertiesData = [
     ],
     agent: {
       name: "Bhuvanesan S",
-      phone: "+91 98765 43210",
+      phone: "+91 821-7338802",
       email: "nesttohomes@gmail.com",
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80",
@@ -57,7 +57,7 @@ export const propertiesData = [
     ],
     agent: {
       name: "Sarah D Souza",
-      phone: "+91 98765 43210",
+      phone: "+91 821-7338802",
       email: "nesttohomes@gmail.com",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -90,7 +90,7 @@ export const propertiesData = [
     ],
     agent: {
       name: "Bhuvanesan S",
-      phone: "+91 98765 43210",
+      phone: "+91 821-7338802",
       email: "nesttohomes@gmail.com",
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80",
@@ -121,7 +121,7 @@ export const propertiesData = [
     ],
     agent: {
       name: "Sarah D Souza",
-      phone: "+91 98765 43210",
+      phone: "+91 821-7338802",
       email: "nesttohomes@gmail.com",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -153,7 +153,7 @@ export const propertiesData = [
     ],
     agent: {
       name: "Bhuvanesan S",
-      phone: "+91 98765 43210",
+      phone: "+91 821-7338802",
       email: "nesttohomes@gmail.com",
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80",
@@ -186,7 +186,7 @@ export const propertiesData = [
     ],
     agent: {
       name: "Sarah D Souza",
-      phone: "+91 98765 43210",
+      phone: "+91 821-7338802",
       email: "nesttohomes@gmail.com",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",

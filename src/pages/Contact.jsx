@@ -12,6 +12,8 @@ import {
 const CONTACT_PHONE = import.meta.env.VITE_CONTACT_PHONE || "+91 98765 43210";
 const CONTACT_WHATSAPP =
   import.meta.env.VITE_CONTACT_WHATSAPP || "919876543210";
+const CONTACT_EMAIL =
+  import.meta.env.VITE_CONTACT_EMAIL || "nesttohomes@gmail.com";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -123,7 +125,7 @@ export default function Contact() {
                 <div>
                   <h5 style={styles.contactLabel}>Official Inbox</h5>
                   <a
-                    href="mailto:nesttohomes@gmail.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     style={{
                       ...styles.contactLink,
                       color: "var(--accent-gold)",
@@ -131,7 +133,7 @@ export default function Contact() {
                     }}
                     className="glow-text-gold"
                   >
-                    nesttohomes@gmail.com
+                    {CONTACT_EMAIL}
                   </a>
                 </div>
               </div>
@@ -194,9 +196,9 @@ export default function Contact() {
               <h4 style={{ color: "#FFF" }}>Message Dispatched</h4>
               <p style={styles.successText}>
                 Thank you for connecting with Nest to Homes. Your request has
-                been forwarded to our corporate desk at
-                **nesttohomes@gmail.com**. A senior advisor will follow up
-                shortly.
+                been forwarded to our corporate desk at{" "}
+                <strong>{CONTACT_EMAIL}</strong>. A senior advisor will follow
+                up shortly.
               </p>
             </div>
           ) : (

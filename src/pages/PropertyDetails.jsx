@@ -13,6 +13,8 @@ import {
 
 const CONTACT_WHATSAPP =
   import.meta.env.VITE_CONTACT_WHATSAPP || "919876543210";
+const CONTACT_EMAIL =
+  import.meta.env.VITE_CONTACT_EMAIL || "nesttohomes@gmail.com";
 
 export default function PropertyDetails({ property, setCurrentPage }) {
   const [inquiryForm, setInquiryForm] = useState({
@@ -210,7 +212,7 @@ export default function PropertyDetails({ property, setCurrentPage }) {
                     fontWeight: "600",
                   }}
                 >
-                  Forwarded to: nesttohomes@gmail.com
+                  Forwarded to: {CONTACT_EMAIL}
                 </p>
               </div>
             ) : (

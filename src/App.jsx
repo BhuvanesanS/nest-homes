@@ -8,6 +8,7 @@ import VirtualTourPage from "./pages/VirtualTourPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FloatingContact from "./components/FloatingContact";
+import InquiryPopup from "./components/InquiryPopup";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -89,6 +90,9 @@ function App() {
 
       {/* Premium Floating Contact Triggers */}
       <FloatingContact />
+
+      {/* Premium delayed Inquiry Popup */}
+      <InquiryPopup />
     </div>
   );
 }

@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 
 const CONTACT_PHONE = import.meta.env.VITE_CONTACT_PHONE || "+91 98765 43210";
+const CONTACT_EMAIL =
+  import.meta.env.VITE_CONTACT_EMAIL || "nesttohomes@gmail.com";
 
 export default function Footer({ setCurrentPage }) {
   const [email, setEmail] = useState("");
@@ -148,11 +150,11 @@ export default function Footer({ setCurrentPage }) {
                 className="glow-text-gold"
               />
               <a
-                href="mailto:nesttohomes@gmail.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 style={styles.contactText}
                 className="glow-text-gold"
               >
-                nesttohomes@gmail.com
+                {CONTACT_EMAIL}
               </a>
             </div>
           </div>
